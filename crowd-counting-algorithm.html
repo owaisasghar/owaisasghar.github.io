@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowd Counting Algorithm | Awais Asghar</title>
+    <meta name="description" content="Dense-based approach to count crowds using video feeds from drones at ~100m altitude, handling varying densities and lighting conditions for real-time metrics.">
+    <link rel="stylesheet" href="project-styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Awais Asghar</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#research">Research</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://github.com/owaisasghar" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/awais-asghar-9b9b27175/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-header">
+        <div class="container">
+            <div class="project-title">
+                <div class="project-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h1>Crowd Counting Algorithm</h1>
+            </div>
+            <div class="project-meta">
+                <div class="project-meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>Completed: August 2023</span>
+                </div>
+                <div class="project-meta-item">
+                    <i class="fas fa-user"></i>
+                    <span>Role: Computer Vision Specialist</span>
+                </div>
+                <div class="project-meta-item">
+                    <i class="fas fa-building"></i>
+                    <span>Organization: Blitzkrieg Defense Solution</span>
+                </div>
+            </div>
+            <div class="project-tags">
+                <span>Computer Vision</span>
+                <span>Deep Learning</span>
+                <span>Real-time Processing</span>
+                <span>Drone Systems</span>
+                <span>Crowd Analysis</span>
+            </div>
+            <p class="project-summary">
+                Dense-based approach to count crowds using video feeds from drones at ~100m altitude, handling varying densities and lighting conditions for real-time metrics. This system provides accurate population estimates for large gatherings and events.
+            </p>
+            <div class="project-actions">
+                <a href="index.html#projects" class="btn secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <div class="project-section">
+                <h2>Project Overview</h2>
+                <div class="project-image">
+                    <img src="assets/crowd-counting.jpg" alt="Crowd Counting Algorithm Visualization">
+                </div>
+                <p>
+                    The Crowd Counting Algorithm is an advanced computer vision solution designed to accurately estimate the number of people in large gatherings using aerial footage from drones. Operating at altitudes of approximately 100 meters, this system can process video feeds in real-time to provide continuous crowd size estimates regardless of density variations and changing lighting conditions.
+                </p>
+                <p>
+                    This technology addresses the significant challenge of crowd size estimation, which is critical for event management, public safety, and security operations. Traditional methods of crowd counting are often inaccurate, labor-intensive, or require fixed infrastructure. Our drone-based approach offers flexibility, accuracy, and real-time insights.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h2>Key Features</h2>
+                <ul class="features-list">
+                    <li>
+                        <strong>Density-Based Approach:</strong> Utilizes density estimation techniques rather than individual detection, allowing for accurate counts even in densely packed areas.
+                    </li>
+                    <li>
+                        <strong>Adaptive to Lighting Conditions:</strong> Maintains accuracy across various lighting scenarios, from bright daylight to evening conditions with artificial lighting.
+                    </li>
+                    <li>
+                        <strong>Real-Time Processing:</strong> Processes video feeds at 10-15 frames per second on edge computing devices mounted on drones.
+                    </li>
+                    <li>
+                        <strong>Perspective Correction:</strong> Automatically adjusts for the drone's viewing angle and altitude to ensure consistent counting accuracy.
+                    </li>
+                    <li>
+                        <strong>Region-Based Analysis:</strong> Supports defining specific regions of interest for targeted crowd monitoring in different areas.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2>Technical Implementation</h2>
+                <p>
+                    The algorithm was implemented using a combination of deep learning techniques and computer vision principles. The core components include:
+                </p>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="tech-name">Python</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="tech-name">TensorFlow</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="tech-name">OpenCV</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="tech-name">NVIDIA Jetson</div>
+                    </div>
+                </div>
+                <p>
+                    The algorithm follows these key steps:
+                </p>
+                <ol>
+                    <li>Preprocess incoming video frames (resizing, normalization)</li>
+                    <li>Apply perspective transformation based on drone altitude and angle</li>
+                    <li>Generate density maps using a Convolutional Neural Network (CNN)</li>
+                    <li>Integrate density values to obtain crowd count estimates</li>
+                    <li>Apply temporal smoothing to reduce count fluctuations</li>
+                    <li>Visualize results with heat maps overlaid on the original footage</li>
+                </ol>
+                <div class="code-block">
+                    <pre><code>
+# Simplified pseudocode for the density-based crowd counting
+def count_crowd(image, model):
+    # Preprocess image
+    processed_image = preprocess(image)
+    
+    # Apply perspective transformation
+    transformed_image = apply_perspective_transform(processed_image, drone_altitude, camera_angle)
+    
+    # Generate density map using CNN
+    density_map = model.predict(transformed_image)
+    
+    # Integrate density map to get count
+    crowd_count = np.sum(density_map)
+    
+    # Apply temporal smoothing if processing video
+    if processing_video:
+        crowd_count = apply_temporal_smoothing(crowd_count, previous_counts)
+    
+    return crowd_count, density_map
+                    </code></pre>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2>Results and Impact</h2>
+                <p>
+                    The Crowd Counting Algorithm has been deployed in several real-world scenarios with impressive results:
+                </p>
+                <ul class="features-list">
+                    <li>Achieved counting accuracy of 92-95% in moderately dense crowds (compared to ground truth)</li>
+                    <li>Maintained 85-90% accuracy in extremely dense scenarios</li>
+                    <li>Successfully processed video feeds in real-time on edge devices</li>
+                    <li>Provided valuable insights for event management and security operations</li>
+                </ul>
+                <p>
+                    This technology has significant applications in public safety, event management, urban planning, and security operations. By providing accurate, real-time crowd estimates, it enables better resource allocation, improved safety measures, and enhanced situational awareness.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="related-projects-grid">
+                <div class="related-project-card">
+                    <h3 class="related-project-title">Payload Dropping Algorithm</h3>
+                    <p>Advanced algorithm to accurately predict the ground impact point of a payload dropped from 100m to 150m, utilizing environmental parameters for precise calculations.</p>
+                    <div class="related-project-tags">
+                        <span>Python</span>
+                        <span>Physics Modeling</span>
+                    </div>
+                    <div class="project-actions" style="margin-top: 1rem;">
+                        <a href="payload-dropping-algorithm.html" class="btn secondary">View Project</a>
+                    </div>
+                </div>
+                <div class="related-project-card">
+                    <h3 class="related-project-title">Object Detection & Tracking</h3>
+                    <p>AI-powered algorithm for detecting and tracking specific objects using AI Hut on Raspberry Pi 5, enabling drones to autonomously follow targets.</p>
+                    <div class="related-project-tags">
+                        <span>Raspberry Pi</span>
+                        <span>YOLO</span>
+                    </div>
+                    <div class="project-actions" style="margin-top: 1rem;">
+                        <a href="object-detection-tracking.html" class="btn secondary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Awais Asghar. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/owaisasghar" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/awais-asghar-9b9b27175/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:awaisasghar900@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="project-script.js"></script>
+</body>
+</html>
