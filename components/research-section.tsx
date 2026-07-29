@@ -53,7 +53,7 @@ interface ResearchCardProps {
 
 function ResearchCard({ title, description, tags, repoUrl, collaborators, additionalLinks }: ResearchCardProps) {
   return (
-    <Card className="overflow-hidden border border-border/50 hover:border-primary/50 transition-all hover:shadow-lg">
+    <Card className="overflow-hidden bg-card border border-border hover:border-primary/50 transition-all hover:shadow-md">
       <CardContent className="p-6">
         <div className="flex flex-col md:flex-row gap-6">
           <div className="md:w-2/3 space-y-4">

@@ -24,7 +24,7 @@ export function ExperienceSection() {
                 </div>
                 <p className="text-primary font-medium">
                   <Link
-                    href="https://pk.linkedin.com/company/blitzkrieg-defense-solution"
+                    href="https://cavalier-group.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline flex items-center gap-1 group"
@@ -39,7 +39,7 @@ export function ExperienceSection() {
                     <li>Designed Algorithms for Object Detection, Tracking, and Automation on Real-Time Hardware</li>
                     <li>Created a Dense-Based Approach to Count Crowds Using Video Feeds from Drones</li>
                     <li>
-                      Built an AI-Powered Algorithm for Detecting and Tracking Specific Objects Using AI Hut on
+                      Built an AI-Powered Algorithm for Detecting and Tracking Specific Objects Using an AI HAT on
                       Raspberry Pi 5
                     </li>
                   </ul>

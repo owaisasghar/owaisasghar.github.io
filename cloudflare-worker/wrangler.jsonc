@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "awais-portfolio-chatbot",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-29",
+  "ai": {
+    "binding": "AI"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "RATE_LIMIT",
+      "id": "13ec7e046abb4437b4780389be15351b"
+    }
+  ],
+  "vars": {
+    "ALLOWED_ORIGINS": "https://owaisasghar.github.io,http://localhost:3000"
+  }
+}

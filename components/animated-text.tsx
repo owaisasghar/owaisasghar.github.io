@@ -159,11 +159,7 @@ interface GradientTextProps {
 export function GradientTextEffect({ text, className }: GradientTextProps) {
   return (
     <span
-      className={cn(
-        "bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent",
-        "bg-[length:200%_auto] animate-text-gradient",
-        className,
-      )}
+      className={cn("text-primary", className)}
     >
       {text}
     </span>

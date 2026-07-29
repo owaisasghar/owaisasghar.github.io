@@ -16,7 +16,7 @@ export function EducationSection() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-card rounded-lg p-6 shadow-lg border border-border/50">
+            <div className="bg-card rounded-lg p-6 shadow-sm border border-border">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b">
                 <GraduationCap className="h-6 w-6 text-primary" />
                 <h3 className="text-xl font-bold">Education</h3>
@@ -40,29 +40,14 @@ export function EducationSection() {
                     </Link>
                   </div>
                   <p className="text-muted-foreground text-sm mt-2">
-                    Studied at Pakistan's #1 ranked university for Engineering & Technology (#127 globally)
+                    Focused on artificial intelligence, signal processing, embedded systems, control systems, and
+                    electrical engineering fundamentals.
                   </p>
-                </div>
-
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <h4 className="font-bold text-lg">FSc Pre-Engineering</h4>
-                    <span className="text-sm text-muted-foreground">March 2018</span>
-                  </div>
-                  <p className="text-primary">Punjab Group of Colleges, Pattoki</p>
-                </div>
-
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <h4 className="font-bold text-lg">Matriculation</h4>
-                    <span className="text-sm text-muted-foreground">March 2016</span>
-                  </div>
-                  <p className="text-primary">Army Public School, Chunian Cantt</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 shadow-lg border border-border/50">
+            <div className="bg-card rounded-lg p-6 shadow-sm border border-border">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b">
                 <Award className="h-6 w-6 text-primary" />
                 <h3 className="text-xl font-bold">Certifications</h3>

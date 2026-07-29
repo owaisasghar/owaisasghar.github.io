@@ -17,17 +17,37 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
+    const form = e.currentTarget
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+      if (!accessKey) throw new Error("The contact form has not been configured yet. Please email me directly.")
 
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    })
+      const formData = new FormData(form)
+      formData.append("access_key", accessKey)
+      formData.append("from_name", "Awais Asghar Portfolio")
 
-    setIsSubmitting(false)
-    e.currentTarget.reset()
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      })
+      const result = (await response.json()) as { success?: boolean; message?: string }
+      if (!response.ok || !result.success) throw new Error(result.message || "Your message could not be sent.")
+
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. Your message has been emailed to me and I'll get back to you soon.",
+      })
+      form.reset()
+    } catch (error) {
+      toast({
+        title: "Message not sent",
+        description: error instanceof Error ? error.message : "Please email me directly instead.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -115,7 +135,7 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 shadow-lg border border-border/50">
+            <div className="bg-card rounded-lg p-6 shadow-sm border border-border">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -123,13 +143,13 @@ export function ContactSection() {
                       <label htmlFor="name" className="text-sm font-medium">
                         Your Name
                       </label>
-                      <Input id="name" placeholder="John Doe" required />
+                      <Input id="name" name="name" placeholder="John Doe" minLength={2} maxLength={100} required />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-sm font-medium">
                         Your Email
                       </label>
-                      <Input id="email" type="email" placeholder="john@example.com" required />
+                      <Input id="email" name="email" type="email" placeholder="john@example.com" maxLength={254} required />
                     </div>
                   </div>
 
@@ -137,15 +157,16 @@ export function ContactSection() {
                     <label htmlFor="subject" className="text-sm font-medium">
                       Subject
                     </label>
-                    <Input id="subject" placeholder="How can I help you?" required />
+                    <Input id="subject" name="subject" placeholder="How can I help you?" minLength={3} maxLength={150} required />
                   </div>
 
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium">
                       Message
                     </label>
-                    <Textarea id="message" placeholder="Your message..." rows={5} required />
+                    <Textarea id="message" name="message" placeholder="Your message..." rows={5} minLength={10} maxLength={3000} required />
                   </div>
+                  <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
                 </div>
 
                 <Button type="submit" className="w-full rounded-full" disabled={isSubmitting}>
