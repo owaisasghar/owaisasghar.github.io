@@ -3,7 +3,22 @@ import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Bot, Brain, Cpu, Database, Eye, FileText, Github, Plane, ScanSearch, ShieldCheck } from "lucide-react"
+import {
+  Bot,
+  Brain,
+  Cpu,
+  Database,
+  Eye,
+  FileText,
+  Github,
+  Map as MapIcon,
+  Plane,
+  ScanSearch,
+  ShieldCheck,
+  Stethoscope,
+  TrendingUp,
+  Video,
+} from "lucide-react"
 import { AnimatedCard } from "@/components/animated-card"
 
 type Category = "drones" | "vision" | "nlp" | "robotics" | "research"
@@ -77,6 +92,20 @@ const projects: Record<Category, Project[]> = {
   ],
   vision: [
     {
+      title: "Language-Guided Multi-Camera Edge Perception",
+      description: "Ask a camera network in plain language (\"find all white SUVs\"): open-vocabulary detection, per-camera tracking, and cross-camera Re-ID. Runs 8 × 1080p streams at 10 FPS each on one 8 GB laptop GPU (p50 latency 42.6 ms).",
+      tags: ["YOLO-World", "CLIP / FastReID", "FastAPI + React"],
+      icon: <Video className="h-10 w-10 text-primary" />,
+      repoUrl: "https://github.com/owaisasghar/language-guided-edge-perception",
+    },
+    {
+      title: "Aerial Vehicle Detection & Speed Estimation",
+      description: "RF-DETR fine-tuned on 28k drone images (VisDrone, UAVDT, DroneVehicle) with sliced inference, ByteTrack, and calibrated speed estimation. Held-out test mAP@50 91.8%; model published on Hugging Face.",
+      tags: ["RF-DETR", "ByteTrack", "Hugging Face"],
+      icon: <ScanSearch className="h-10 w-10 text-primary" />,
+      repoUrl: "https://github.com/owaisasghar/aerial-vehicle-detection-rfdetr",
+    },
+    {
       title: "Threat Segmentation with Incremental Learning",
       description: "SegFormer-based semantic segmentation across PIDRAY, SIXRAY, and GDXRAY using knowledge distillation and incremental learning.",
       tags: ["SegFormer", "Distillation", "Segmentation"],
@@ -112,8 +141,44 @@ const projects: Record<Category, Project[]> = {
       tags: ["Multi-Model", "Video", "Real Time"],
       icon: <Cpu className="h-10 w-10 text-primary" />,
     },
+    {
+      title: "Pneumonia Detection (RSNA)",
+      description: "Transfer learning with ResNet and EfficientNet on RSNA chest X-rays, with an OpenCV preprocessing pipeline. 91.2% test accuracy.",
+      tags: ["PyTorch", "Transfer Learning", "Medical Imaging"],
+      icon: <Stethoscope className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "UAV Geospatial Mapping",
+      description: "Automated detection of roads and trees from UAV imagery for mapping workflows.",
+      tags: ["Agisoft", "ArcGIS", "UAV Imagery"],
+      icon: <MapIcon className="h-10 w-10 text-primary" />,
+    },
   ],
   nlp: [
+    {
+      title: "LangGraph Appointment-Booking Agent",
+      description: "Memory-aware conversational agent with calendar integration and vector-store memory for dynamic, multi-turn booking conversations.",
+      tags: ["LangGraph", "LangChain", "GPT-4"],
+      icon: <Bot className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "RAG App for YouTube Q&A",
+      description: "LangChain retrieval-augmented generation app that answers natural-language questions about YouTube video content.",
+      tags: ["LangChain", "RAG", "Embeddings"],
+      icon: <Video className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "AI-Powered Database Insights",
+      description: "Natural-language interface to SQL databases: an LLM turns plain-language questions into SQL queries and analytics.",
+      tags: ["LLM", "Text-to-SQL", "Analytics"],
+      icon: <Database className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "Home Services Policy Automation",
+      description: "OCR and OpenAI pipeline that extracts data from insurance-policy documents, cutting manual review time.",
+      tags: ["OCR", "OpenAI", "Automation"],
+      icon: <FileText className="h-10 w-10 text-primary" />,
+    },
     {
       title: "RAG Document Assistant",
       description: "Retrieval-augmented document assistant built with multiple vector stores and LLM providers for grounded question answering.",
@@ -158,8 +223,28 @@ const projects: Record<Category, Project[]> = {
       tags: ["OCR", "GUI", "Document Processing"],
       icon: <FileText className="h-10 w-10 text-primary" />,
     },
+    {
+      title: "Handwritten Number OCR",
+      description: "Detects and reads handwritten numbers in images using CRAFT text detection and TrOCR transformer recognition, exporting results to CSV and JSON.",
+      tags: ["CRAFT", "TrOCR", "OpenCV"],
+      icon: <FileText className="h-10 w-10 text-primary" />,
+      repoUrl: "https://github.com/owaisasghar/Handwritten-Number-OCR",
+    },
+    {
+      title: "Financial News Analysis & Forecasting",
+      description: "Sentiment and ticker extraction over 10,000+ Reuters headlines, news-impact analysis on prices, and N-BEATS time-series forecasting.",
+      tags: ["NLP", "Sentiment", "N-BEATS"],
+      icon: <TrendingUp className="h-10 w-10 text-primary" />,
+      repoUrl: "https://github.com/owaisasghar/Financial-News-Analysis-and-Stock-Price-Prediction",
+    },
   ],
   robotics: [
+    {
+      title: "Robot Map Beautification",
+      description: "Freelance client project: turns noisy cleaning-robot occupancy maps into clean floor maps by removing laser-ray artifacts and straightening walls (ROSE, ROSE²), with a DeepLabv3+ wall model via ONNX. 99.3% of detected walls kept on 502 real maps, 0.15 s per map on CPU.",
+      tags: ["OpenCV", "ONNX Runtime", "Occupancy Maps"],
+      icon: <MapIcon className="h-10 w-10 text-primary" />,
+    },
     {
       title: "Autonomous Drone Navigation",
       description: "Integrated cameras, LiDAR, object detection, and flight-controller commands for perception-aware autonomous flight.",
@@ -202,6 +287,12 @@ const projects: Record<Category, Project[]> = {
       tags: ["ROS 2", "Gazebo", "RTAB-Map"],
       icon: <Bot className="h-10 w-10 text-primary" />,
     },
+    {
+      title: "Face Tracking with Motor Control",
+      description: "Real-time face detection on Raspberry Pi that drives DC motors to keep the subject in frame.",
+      tags: ["Raspberry Pi", "Face Detection", "Motor Control"],
+      icon: <Cpu className="h-10 w-10 text-primary" />,
+    },
   ],
   research: [
     {
@@ -211,10 +302,18 @@ const projects: Record<Category, Project[]> = {
       icon: <Brain className="h-10 w-10 text-primary" />,
     },
     {
-      title: "UAV Crowd Counting Reproduction",
-      description: "Reproduces a state-of-the-art crowd-counting paper and explores joint inference with vehicle detection.",
+      title: "UAV Crowd Counting & Multi-Person Tracking",
+      description: "P2PNet vs. UAV-Dot under the official DroneCrowd protocol (published L-mAP 51.0 reproduced exactly). Optimized UAV-Dot to 29 ms per 1080p frame, 3.9× faster at equal F1; tracking cuts unique-person count error from 32% to 10%.",
       tags: ["Paper Reproduction", "PyTorch", "UAV"],
       icon: <Eye className="h-10 w-10 text-primary" />,
+      repoUrl: "https://github.com/owaisasghar/uav-crowd-counting",
+    },
+    {
+      title: "SparseSwin Reproduction",
+      description: "Reproduced the SparseSwin vision transformer (Neurocomputing 2024): 96.3% on CIFAR-10 and 81.6% on CIFAR-100, extended to COCO detection and compared with Swin-Tiny.",
+      tags: ["Vision Transformer", "PyTorch", "Paper Reproduction"],
+      icon: <Brain className="h-10 w-10 text-primary" />,
+      repoUrl: "https://github.com/owaisasghar/SparseSwin",
     },
     {
       title: "AI Character Dataset Generator",
