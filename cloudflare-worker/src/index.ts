@@ -19,7 +19,7 @@ const knowledge: KnowledgeChunk[] = [
   {
     title: "Professional experience",
     keywords: ["experience", "job", "work", "company", "engineer", "career", "blitzkrieg", "aiobc", "cavalier"],
-    content: "Awais has 4+ years of hands-on AI experience. Most recently, in October 2026, he worked as a Freelance AI Engineer for a remote client, building a robot map beautification pipeline that straightens walls and removes noise in cleaning-robot occupancy maps. From June 2023 to October 2026 he was an AI Engineer at Blitzkrieg Defense Solutions, Cavalier Group, developing drone payload systems, RWS AI, detection, tracking, automation, crowd counting, and edge deployment. From December 2019 to March 2020 he was an AI Intern at AIOBC, Islamabad, building recommendation, image captioning, and license-plate detection systems deployed with Docker and AWS.",
+    content: "Awais has 4+ years of hands-on AI experience. Most recently, in October 2026, he worked as a Freelance AI Engineer for a remote client, building a robot map beautification pipeline that straightens walls and removes noise in cleaning-robot occupancy maps. From June 2023 to October 2026 he was an AI Engineer at Blitzkrieg Defense Solutions, Cavalier Group, developing drone payload systems, RWS AI, detection, tracking, automation, crowd counting, and edge deployment. From January to April 2023 he was an AI Engineer at AIOBC, Islamabad, building a GUI-based OCR tool and a RAG app that answers questions about YouTube video content. From December 2019 to March 2020 he was an AI Intern at AIOBC, Islamabad, building recommendation, image captioning, and license-plate detection systems deployed with Docker and AWS.",
   },
   {
     title: "Core skills",
