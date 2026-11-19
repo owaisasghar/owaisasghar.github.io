@@ -16,10 +16,10 @@ export function ExperienceTimeline() {
           <Card>
             <CardContent className="p-6">
               <div className="flex items-center justify-between space-x-2 mb-1">
-                <h3 className="font-bold text-lg">Senior AI Engineer</h3>
-                <time className="font-medium text-muted-foreground">June 2023 - Present</time>
+                <h3 className="font-bold text-lg">AI Engineer</h3>
+                <time className="font-medium text-muted-foreground">June 2023 - October 2026</time>
               </div>
-              <div className="text-muted-foreground mb-2">Blitzkreig Defense Solution, Cavalier Group</div>
+              <div className="text-muted-foreground mb-2">Blitzkrieg Defense Solutions, Cavalier Group</div>
               <ul className="list-disc pl-5 space-y-2 text-sm">
                 <li>Developed Drone Payload Systems and Remote Weapon Stations (RWS)</li>
                 <li>Designed Algorithms for Object Detection, Tracking, and Automation on Real-Time Hardware</li>
@@ -43,9 +43,9 @@ export function ExperienceTimeline() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between space-x-2 mb-1">
                 <h3 className="font-bold text-lg">AI Intern</h3>
-                <time className="font-medium text-muted-foreground">January 2023 - April 2023</time>
+                <time className="font-medium text-muted-foreground">December 2019 - March 2020</time>
               </div>
-              <div className="text-muted-foreground mb-2">AIOBC, Rawalpindi</div>
+              <div className="text-muted-foreground mb-2">AIOBC, Islamabad</div>
               <ul className="list-disc pl-5 space-y-2 text-sm">
                 <li>
                   Built AI Applications, including an Article Recommendation System, Image Caption Generation, and

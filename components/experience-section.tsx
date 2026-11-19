@@ -19,8 +19,31 @@ export function ExperienceSection() {
               <div className="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"></div>
               <div className="space-y-3">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-                  <h3 className="text-xl font-bold">Full Stack AI Engineer</h3>
-                  <span className="text-sm text-muted-foreground">June 2023 - Present</span>
+                  <h3 className="text-xl font-bold">Freelance AI Engineer</h3>
+                  <span className="text-sm text-muted-foreground">October 2026</span>
+                </div>
+                <p className="text-primary font-medium">Remote Client · Robot Map Beautification</p>
+                <div className="prose dark:prose-invert max-w-none">
+                  <ul>
+                    <li>
+                      Built a Map Beautification Pipeline for Cleaning-Robot Occupancy Maps: Straightened Walls, Removed
+                      Laser-Ray Artifacts and Noise
+                    </li>
+                    <li>
+                      Integrated a DeepLabv3+ Wall Segmentation Model (ONNX) for Inner Walls, Keeping 99.3% of Detected
+                      Walls Across 502 Real Maps at 0.15 s per Map on CPU
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative pl-8 border-l-2 border-primary/30 dark:border-primary/20">
+              <div className="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"></div>
+              <div className="space-y-3">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                  <h3 className="text-xl font-bold">AI Engineer</h3>
+                  <span className="text-sm text-muted-foreground">June 2023 - October 2026</span>
                 </div>
                 <p className="text-primary font-medium">
                   <Link
@@ -29,7 +52,7 @@ export function ExperienceSection() {
                     rel="noopener noreferrer"
                     className="hover:underline flex items-center gap-1 group"
                   >
-                    Blitzkrieg Defense Solution, Cavalier Group
+                    Blitzkrieg Defense Solutions, Cavalier Group
                     <ExternalLink className="h-3 w-3 inline-block transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </p>
@@ -51,8 +74,8 @@ export function ExperienceSection() {
               <div className="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"></div>
               <div className="space-y-3">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-                  <h3 className="text-xl font-bold">AI Engineer</h3>
-                  <span className="text-sm text-muted-foreground">January 2023 - April 2023</span>
+                  <h3 className="text-xl font-bold">AI Intern</h3>
+                  <span className="text-sm text-muted-foreground">December 2019 - March 2020</span>
                 </div>
                 <p className="text-primary font-medium">
                   <Link
@@ -61,7 +84,7 @@ export function ExperienceSection() {
                     rel="noopener noreferrer"
                     className="hover:underline flex items-center gap-1 group"
                   >
-                    AIOBC, Rawalpindi
+                    AIOBC, Islamabad
                     <ExternalLink className="h-3 w-3 inline-block transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </p>
@@ -72,11 +95,6 @@ export function ExperienceSection() {
                       Vehicle License Plate Detection
                     </li>
                     <li>Gained Expertise in Docker and AWS Deployment for AI Applications</li>
-                    <li>Developed a GUI-Based OCR Solution to Extract Specific Document Information</li>
-                    <li>
-                      Created a Retrieval-Augmented Generation Application to Answer Questions from YouTube Video
-                      Content
-                    </li>
                   </ul>
                 </div>
               </div>
