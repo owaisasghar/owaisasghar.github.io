@@ -344,7 +344,7 @@ export function ProjectSection() {
             </p>
           </div>
 
-          <Tabs defaultValue="drones" className="w-full">
+          <Tabs defaultValue="vision" className="w-full">
             <TabsList className="grid h-auto w-full grid-cols-2 gap-1 rounded-2xl bg-muted/50 p-1 md:grid-cols-5">
               {categories.map((category) => (
                 <TabsTrigger key={category.value} value={category.value} className="rounded-xl px-2 py-2 data-[state=active]:bg-foreground data-[state=active]:text-background">
